@@ -1,0 +1,24 @@
+minimum_cumulusci_version: '3.18.0'
+project:
+    name: LATAM-Salesforce-CAAT
+    package:
+        name: LATAM-Salesforce-CAAT
+        api_version: '49.0'
+    git:
+    source_format: sfdx
+
+tasks:
+    robot:
+        options:
+            suites: robot/LATAM-Salesforce-CAAT/tests
+            options:
+                outputdir: robot/LATAM-Salesforce-CAAT/results
+
+    robot_testdoc:
+        options:
+            path: robot/LATAM-Salesforce-CAAT/tests
+            output: robot/LATAM-Salesforce-CAAT/doc/LATAM-Salesforce-CAAT_tests.html
+
+    run_tests:
+        options:
+            required_org_code_coverage_percent: 75
